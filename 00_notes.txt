@@ -1,0 +1,88 @@
+78-Comando para generar imagen con docker y spring
+
+./mvnw spring-boot:build-image "-Dspring-boot.build-image.imageName=4xe1/i-ecom"
+
+------
+
+79-comandos
+
+docker pull <image>
+docker push <username/image>
+docker run -it -d -p <host-port>:<container-port> --name <name> <image>
+docker start <container id/name>
+docker stop <container id/name>
+docker rm <container id/name>
+docker rmi <image>
+docker ps 
+docker ps -a
+docker images
+docker exec -it <cont-name/cont-id> bash
+docker build -t <username/image> .
+docker logs <cont-name/cont-id>
+docker inspect <cont-name/cont-id> 
+
+------
+
+80-run docker container
+
+docker run -p 8080:8080 4xe1/i-ecom  
+
+------
+
+84-docker network
+
+docker network create indi-net
+
+docker run -p 5532:5432 --name postgres14 --network indi-net -e POSTGRES_PASSWORD=sasa -e POSTGRES_DB=db-ecom-indi -d postgres:14-alpine
+
+el prof usó esta:
+
+docker run --name postgres-indi --network indi-net -e POSTGRES_PASSWORD=sasa -e POSTGRES_DB=db-ecom-indi -d postgres:14-alpine
+
+conexion entre 2 contenedores de manera interactiva:
+
+docker exec -it contenedor1 ping contenedor2
+
+------
+
+85-comandos profe para desplegar contenedores de postgreSQL y pgAdmin
+
+docker run -d --name postgres_container -e POSTGRES_USER=XXX -e POSTGRES_PASSWORD=XXX -e PGDATA=/data/postgres -v postgres:/data/postgres -p 5432:5432 --network YYY --restart unless-stopped postgres:14
+
+docker run -d --name pgadmin_container -e PGADMIN_DEFAULT_EMAIL=pgadmin4pgadmin.org -e PGADMIN_DEFAULT_PASSWORD=admin -e PGADMIN_CONFIG_SERVER_MODE=False -v pgadmin:/var/lib/pgadmin -p 5050:80 --network YYY --restart unless-stopped dpage/pgadmin4
+
+
+docker-compose en el proyecto ...  
+
+docker compose up
+
+docker compose up -d
+
+docker compose down
+
+------
+
+87-ir al localhost:5050/browser/  .... con los contenedores de postgres running
+
+logueate con los datos del docker compose
+
+registra un servidor:
+
+general: 
+ - name: postgres.
+connection:
+ - 
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+MICROSERVICIOS
+
+
+
+
+
+
+
+ 
