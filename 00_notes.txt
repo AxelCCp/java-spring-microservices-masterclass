@@ -62,7 +62,9 @@ docker compose down
 
 ------
 
-87-ir al localhost:5050/browser/  .... con los contenedores de postgres running
+87- POSTGRE Y PG ADMIN CON DOCKER 
+
+ir al localhost:5050/browser/  .... con los contenedores de postgres running
 
 logueate con los datos del docker compose
 
@@ -79,6 +81,22 @@ connection:
 
 MICROSERVICIOS
 
+:::::::::::::::::::::::::::::::::
+
+
+MONGO 
+
+net start mongoDB
+
+net stop mongoDB
+
+EJECUTA MONGOSH EN POWER SHELL
+
+mongosh
+
+muestra las bases de datos
+
+show dbs
 
 
 
