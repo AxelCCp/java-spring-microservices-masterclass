@@ -1,0 +1,49 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: product
+
+  # --- postgres local ---
+  #datasource:
+  #  url: jdbc:postgresql://localhost:5432/db-product-indi
+  #  username: postgres
+  #  password: sasa
+
+  # --- postgres clod - neon db ---
+  datasource:
+    url: jdbc:postgresql://ep-empty-bush-adpf6ten-pooler.c-2.us-east-1.aws.neon.tech/db-product-indi?sslmode=require&channel_binding=require
+    username: neondb_owner
+    password: npg_YgyCfxXaAS48
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  # --- mysql local ---
+  #datasource:
+  #  url: jdbc:mysql://localhost:3306/db-product-indi
+  #  username: root
+  #  password: sasa
+  #jpa:
+  #  show-sql: true
+  #  hibernate:
+  #    ddl-auto: update
+  #  database-platform: org.hibernate.dialect.MySQLDialect
+  #  properties:
+  #    hibernate:
+  #      format_sql: true
+
+  # --- h2 local ---
+  #h2:
+  #  console:
+  #    enabled: true
+  #datasource:
+  #  url: jdbc:h2:mem:test
+  #jpa:
+  #  show-sql: true
+  #  hibernate:
+  #    ddl-auto: create
+

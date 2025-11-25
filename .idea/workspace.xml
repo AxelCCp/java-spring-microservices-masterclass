@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d038f8e1-2ce1-4d9f-8770-ae2697e8c462" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/A8_microservices_kubernetes_india.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a0_firstproject/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a0_firstproject/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a0_firstproject/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a0_firstproject/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a0_firstproject/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a0_firstproject/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a0_firstproject/src/main/java/com/spring/firstproject/FirstprojectApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a0_firstproject/src/main/java/com/spring/firstproject/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a0_firstproject/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a0_firstproject/src/test/java/com/spring/firstproject/FirstprojectApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/docker-compose.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/src/main/java/com/spring/ecom_app/EcomAppApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/src/main/java/com/spring/ecom_app/controller/CartItemController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/src/main/java/com/spring/ecom_app/controller/OrderController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/src/main/java/com/spring/ecom_app/controller/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/src/main/java/com/spring/ecom_app/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/src/main/java/com/spring/ecom_app/model/dto/AddressDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/src/main/java/com/spring/ecom_app/model/dto/CartItemRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/src/main/java/com/spring/ecom_app/model/dto/OrderItemDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/src/main/java/com/spring/ecom_app/model/dto/OrderResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/src/main/java/com/spring/ecom_app/model/dto/ProductRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/src/main/java/com/spring/ecom_app/model/dto/ProductResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/src/main/java/com/spring/ecom_app/model/dto/UserRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/src/main/java/com/spring/ecom_app/model/dto/UserResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/src/main/java/com/spring/ecom_app/model/entity/Address.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/src/main/java/com/spring/ecom_app/model/entity/CartItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/src/main/java/com/spring/ecom_app/model/entity/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/src/main/java/com/spring/ecom_app/model/entity/OrderItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/src/main/java/com/spring/ecom_app/model/entity/OrderStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/src/main/java/com/spring/ecom_app/model/entity/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/src/main/java/com/spring/ecom_app/model/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/src/main/java/com/spring/ecom_app/model/entity/UserRole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/src/main/java/com/spring/ecom_app/model/repository/CartItemRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/src/main/java/com/spring/ecom_app/model/repository/OrderRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/src/main/java/com/spring/ecom_app/model/repository/ProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/src/main/java/com/spring/ecom_app/model/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/src/main/java/com/spring/ecom_app/model/service/CartItemService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/src/main/java/com/spring/ecom_app/model/service/OrderService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/src/main/java/com/spring/ecom_app/model/service/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/src/main/java/com/spring/ecom_app/model/service/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_ecom-app/src/test/java/com/spring/ecom_app/EcomAppApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_order/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_order/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_order/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_order/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_order/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_order/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_order/src/main/java/com/indi/order/OrderApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_order/src/main/java/com/indi/order/controller/CartItemController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_order/src/main/java/com/indi/order/controller/OrderController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_order/src/main/java/com/indi/order/model/dto/CartItemRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_order/src/main/java/com/indi/order/model/dto/OrderItemDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_order/src/main/java/com/indi/order/model/dto/OrderResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_order/src/main/java/com/indi/order/model/entity/CartItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_order/src/main/java/com/indi/order/model/entity/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_order/src/main/java/com/indi/order/model/entity/OrderItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_order/src/main/java/com/indi/order/model/entity/OrderStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_order/src/main/java/com/indi/order/model/repository/CartItemRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_order/src/main/java/com/indi/order/model/repository/OrderRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_order/src/main/java/com/indi/order/model/service/CartItemService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_order/src/main/java/com/indi/order/model/service/OrderService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_order/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_order/src/test/java/com/indi/order/OrderApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_product/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_product/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_product/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_product/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_product/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_product/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_product/src/main/java/com/indi/product/ProductApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_product/src/main/java/com/indi/product/controller/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_product/src/main/java/com/indi/product/model/dto/ProductRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_product/src/main/java/com/indi/product/model/dto/ProductResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_product/src/main/java/com/indi/product/model/entity/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_product/src/main/java/com/indi/product/model/repository/ProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_product/src/main/java/com/indi/product/model/service/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_product/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_product/src/test/java/com/indi/product/ProductApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_user/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_user/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_user/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_user/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_user/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_user/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_user/src/main/java/com/indi/user/UserApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_user/src/main/java/com/indi/user/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_user/src/main/java/com/indi/user/model/dto/AddressDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_user/src/main/java/com/indi/user/model/dto/UserRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_user/src/main/java/com/indi/user/model/dto/UserResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_user/src/main/java/com/indi/user/model/entity/Address.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_user/src/main/java/com/indi/user/model/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_user/src/main/java/com/indi/user/model/entity/UserRole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_user/src/main/java/com/indi/user/model/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_user/src/main/java/com/indi/user/model/service/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_user/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2_user/src/test/java/com/indi/user/UserApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_order-postgres/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_order-postgres/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_order-postgres/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_order-postgres/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_order-postgres/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_order-postgres/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_order-postgres/src/main/java/com/indi/order/OrderApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_order-postgres/src/main/java/com/indi/order/controller/CartItemController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_order-postgres/src/main/java/com/indi/order/controller/OrderController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_order-postgres/src/main/java/com/indi/order/model/dto/CartItemRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_order-postgres/src/main/java/com/indi/order/model/dto/OrderItemDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_order-postgres/src/main/java/com/indi/order/model/dto/OrderResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_order-postgres/src/main/java/com/indi/order/model/entity/CartItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_order-postgres/src/main/java/com/indi/order/model/entity/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_order-postgres/src/main/java/com/indi/order/model/entity/OrderItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_order-postgres/src/main/java/com/indi/order/model/entity/OrderStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_order-postgres/src/main/java/com/indi/order/model/repository/CartItemRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_order-postgres/src/main/java/com/indi/order/model/repository/OrderRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_order-postgres/src/main/java/com/indi/order/model/service/CartItemService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_order-postgres/src/main/java/com/indi/order/model/service/OrderService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_order-postgres/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_order-postgres/src/test/java/com/indi/order/OrderApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_product-mysql/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_product-mysql/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_product-mysql/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_product-mysql/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_product-mysql/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_product-mysql/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_product-mysql/src/main/java/com/indi/product/ProductApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_product-mysql/src/main/java/com/indi/product/controller/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_product-mysql/src/main/java/com/indi/product/model/dto/ProductRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_product-mysql/src/main/java/com/indi/product/model/dto/ProductResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_product-mysql/src/main/java/com/indi/product/model/entity/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_product-mysql/src/main/java/com/indi/product/model/repository/ProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_product-mysql/src/main/java/com/indi/product/model/service/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_product-mysql/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_product-mysql/src/test/java/com/indi/product/ProductApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_user-mongo/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_user-mongo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_user-mongo/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_user-mongo/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_user-mongo/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_user-mongo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_user-mongo/src/main/java/com/indi/user/UserApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_user-mongo/src/main/java/com/indi/user/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_user-mongo/src/main/java/com/indi/user/model/dto/AddressDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_user-mongo/src/main/java/com/indi/user/model/dto/UserRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_user-mongo/src/main/java/com/indi/user/model/dto/UserResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_user-mongo/src/main/java/com/indi/user/model/entity/Address.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_user-mongo/src/main/java/com/indi/user/model/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_user-mongo/src/main/java/com/indi/user/model/entity/UserRole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_user-mongo/src/main/java/com/indi/user/model/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_user-mongo/src/main/java/com/indi/user/model/service/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_user-mongo/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/a3_user-mongo/src/test/java/com/indi/user/UserApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="35wcFmFwMPSP9wdzj1f6ngjQfrT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d038f8e1-2ce1-4d9f-8770-ae2697e8c462" name="Changes" comment="" />
+      <created>1764024473855</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1764024473855</updated>
+    </task>
+    <servers />
+  </component>
+</project>

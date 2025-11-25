@@ -98,6 +98,31 @@ muestra las bases de datos
 
 show dbs
 
+-------
+
+Mongo nube 
+
+usa correo de burrocarnicero
+
+burrocarnicero_db_user
+
+NSVRkBOQPv0vPHwI
+
+
+------
+
+
+Nube de postgres 
+
+Neon DB
+
+npx neonctl@latest init
+
+psql 'postgresql://neondb_owner:npg_YgyCfxXaAS48@ep-empty-bush-adpf6ten-pooler.c-2.us-east-1.aws.neon.tech/db-product-indi?sslmode=require&channel_binding=require'
+
+
+
+
 
 
 
