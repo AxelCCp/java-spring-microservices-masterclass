@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: configserver
+
+  # --- configuraciones en base de datos mysql
+  #profiles:
+  #  active: jdbc
+  #datasource:
+  #  url: jdbc:mysql://localhost:3306/db-sp-cloud-config
+    #username: ${USER}
+    #password: ${PASSWORD}
+  #  username: root
+  #  password: sasa
+  #  driver-class-name: com.mysql.cj.jdbc.Driver
+  #cloud:
+  #  config:
+  #    server:
+  #      jdbc:
+  #        sql: "SELECT PROP_KEY, PROP_VALUE from PROPERTIES where APPLICATION=? AND PROFILE=? AND LABEL=?"
+  #        default-label: main
+
+  # --- conexion a github
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/AxelCCp/spring-cloud-config-configurations
+          username: ${GIT_USER}   #agrega las env en configs de despliegue
+          password: ${GIT_TOKEN}
+server:
+  port: 8888
+
+encrypt:
+  key: "SDGHFJSGV34NB34N56N"
+
