@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: configdemo
+  config:
+    import: optional:configserver:http://localhost:8888  # --- spring cloud config --- 144
+  profiles:
+    active: dev
+
+#build:
+#  id: 122
+#  version: 2.2.2
+#  name: "Default-Build"
+#  type: "Default Build"
+#133
+#LAS VARIABLES LAS PASAS EN CONFIGURACIONES DE DESPLIEGUE O SE ESTABLECEN EN EL SERVIDOR DONDE SE DESPLIEGA. - usa un .env
+build:
+  id: ${ID}
+  version: ${VERSION}
+  name: ${NAME}
+#build2:
+#  id: ${ID}
+#  version: ${VERSION}
+#  name: ${NAME}
+# BUILD_ID=4444;BUILD_NAME=NAME_TEST;BUILD_VERSION=1.0.0
+# ID=9999;NAME=NEW_NAME;VERSION=3.3.3.3
+
+
+#145 - config de actuator - para que tome cambios de configuracion sin bajar el microservicio -  en el restcontroller se pone @RefreshScope
+#para que funcione despues de hacer un cambio en el repo de git, ejecutar un post a http://localhost:8080/actuator/refresh
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: refresh
+
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+

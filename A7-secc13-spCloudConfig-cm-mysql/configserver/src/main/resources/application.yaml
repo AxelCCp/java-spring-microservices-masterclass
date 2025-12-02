@@ -1,7 +1,6 @@
 spring:
   application:
     name: configserver
-
   # --- configuraciones en base de datos mysql
   #profiles:
   #  active: jdbc
@@ -26,10 +25,11 @@ spring:
         git:
           uri: https://github.com/AxelCCp/spring-cloud-config-configurations
           username: ${GIT_USER}   #agrega las env en configs de despliegue
-          password: ${GIT_TOKEN}
+          password: ${GIT_TOKEN}  #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
 server:
   port: 8888
 
+# localhost:8888/encrypt  // localhost:8888/decrypt?Content-type=text-plain
 encrypt:
   key: "SDGHFJSGV34NB34N56N"
 

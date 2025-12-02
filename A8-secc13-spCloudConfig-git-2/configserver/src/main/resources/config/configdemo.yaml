@@ -1,0 +1,23 @@
+app:
+  deployment:
+    id: 101
+    version: 1.2.3
+    name: "DEFAULT-Production-Build NATIVE"
+    type: "DEFAULT Build NATIVE"
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+
+
