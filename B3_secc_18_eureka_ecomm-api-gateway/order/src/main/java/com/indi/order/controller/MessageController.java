@@ -1,0 +1,27 @@
+package com.indi.order.controller;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
+
+
+@RestController
+@RefreshScope
+public class MessageController {
+
+    @Value("${app.message}")
+    private String message;
+
+    @GetMapping("/message")
+    @RateLimiter(name="retryBreaker", fallbackMethod = "getMessageFallback") // 248 - en order.yaml esta la configuracion de maximo de llamadas, es se prueba con jmeter.
+    public String getMessage() {
+        return message;
+    }
+
+    public String getMessageFallback(Exception e) {
+        return "helle fallback";
+    }
+}

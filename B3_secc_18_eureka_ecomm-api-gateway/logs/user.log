@@ -1,0 +1,2 @@
+2026-02-05T00:02:33.820-06:00  INFO 11208 --- [user] [AsyncResolver-bootstrap-executor-%d] [                                                 ] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-02-05T00:07:33.840-06:00  INFO 11208 --- [user] [AsyncResolver-bootstrap-executor-%d] [                                                 ] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

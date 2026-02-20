@@ -1,0 +1,36 @@
+services:
+  mysql:
+    container_name: c-mysql-indi
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: yyy
+      MYSQL_DATABASE: db-user-indi
+      MYSQL_USER: yyy
+      MYSQL_PASSWORD: yyy
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3307:3306"
+    networks:
+      - mysql
+    restart: unless-stopped
+
+  phpmyadmin:
+    container_name: c-phpmyadmin-indi
+    image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: sasa
+    ports:
+      - "8484:80"
+    networks:
+      - mysql
+    restart: unless-stopped
+
+networks:
+  mysql:
+    driver: bridge
+
+volumes:
+  mysql_data:

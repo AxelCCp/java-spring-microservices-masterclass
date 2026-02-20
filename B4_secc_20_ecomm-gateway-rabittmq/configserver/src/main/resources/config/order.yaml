@@ -1,0 +1,98 @@
+server:
+  port: 8083
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db-order-indi
+    username: ${DB_USER} #postgres  #AGREGAR .ENV  DE ORDER A LAS CONFIGURACIONES DEL RUN DE ORDER.
+    password: ${DB_PASS} #sasa
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  # DESPLIEGA EL CONTENEDOR DE RABBIT
+  # docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:4-management
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+#256 - configuracion de exchange queue y traking 
+rabbitmq:
+  exchange:
+    name: order.exchange
+  queue:
+    name: order.queue
+  routing:
+    key: order.tracking    
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  #para mostrar detalles acerca de la health - para circuit breaker y resilience4j      
+  endpoint:
+    health:
+      show-details: always
+  health:
+    circuitbreakers:
+      enabled: true    
+
+  #zipkin
+  tracing:
+    sampling:
+      probability: 1.0
+
+
+# http://localhost:8083/actuator/busrefresh
+
+
+
+app:
+  message: "--- HELLO MS ORDER upp---"
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true
+
+logging:
+  file:
+    name: logs/${spring.application.name}.log
+  logback:
+    rollingpolicy:
+      max-file-size: 5MB
+      max-history: 7
+
+# Circuit Breaker
+resilience4j:
+  circuitbreaker:
+    instances:
+      product:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        minimumNumberOfCalls: 5
+        permittedNumberOfCallsInHalfOpenState: 3
+        waitDurationInOpenState: 10s
+        failureRateThreshold: 50
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        slidingWindowType: count_based
+  retry:
+    instances:
+      retryBreaker:
+        maxAttempts: 5
+        waitDuration: 500ms
+  ratelimiter:
+    instances:
+      retryBreaker:
+        timeout-duration: 0
+        limit-refresh-period: 
+        limit-for-period: 2
