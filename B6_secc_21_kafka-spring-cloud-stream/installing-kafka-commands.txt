@@ -1,0 +1,94 @@
+---------------------
+CONTENEDOR ZOOKEEPER
+---------------------
+
+docker run -d --name zookeeper -p 2181:2181 -e ZOOKEEPER_CLIENT_PORT=2181 -e ZOOKEEPER_TICK_TIME=2000 confluentinc/cp-zookeeper:7.5.0
+
+----------------------
+CONTENEDOR DE KAFKA
+----------------------
+
+docker run -d --name kafka -p 9092:9092 -e KAFKA_BROKER_ID=1 -e KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181 -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092 -e KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1 --link zookeeper confluentinc/cp-kafka:7.5.0
+
+-----------------------------------
+EJECUTA CONTENEDOR MODO INTERACTIVO
+-----------------------------------
+
+docker exec -it kafka bash
+
+------------------------------------------------------------------
+CREA TOPIC CON 3 PARTICIONES Y SI BACK DE INFORMACION REPLICACTION
+------------------------------------------------------------------
+
+kafka-topics --create --topic my-topic --bootstrap-server localhost:9092 --partitions 3 -- replication-factor 1
+
+kafka-topics --create --topic new-topic --bootstrap-server localhost:9092 --partitions 2 -- replication-factor 1
+
+-----------------
+LISTAR LOS TOPICS
+-----------------
+
+kafka-topics --list --bootstrap-server localhost:9092
+
+-----------------
+DESCRIBE UN TOPIC
+-----------------
+
+kafka-topics --describe --topic my-topic --bootstrap-server localhost:9092
+
+
+----------------------------------
+HERRAMIENTA KAFKA CONSOLE PRODUCER
+----------------------------------
+*inicia el producer para oir en live mode.
+
+kafka-console-producer --topic my-topic --bootstrap-server localhost:9092
+
+---------------------------------------------------------------
+INICIA UN CONSUMIDOR PARA LEER LOS MENSAJES QUE LLEGAN AL TOPIC
+---------------------------------------------------------------
+* esto en otra terminal.
+
+docker exec -it kafka bash
+
+kafka-console-consumer --topic my-topic --bootstrap-server localhost:9092 --from-beginning
+
+
+----------------------------------------------
+SE AGRUPAN LOS CONSUMIDORES Y EL MENSAJE SOLO LE VA A LLEGAR A UN CONSUMIDOR, AUNQUE ESTEN ESCUCHANDO EL MISMO TOPIC
+----------------------------------------------
+
+* por defecto los mensajes llegan a la particion 0 ,  por eso solo escucha un solo consumidor.
+
+docker exec -it kafka bash
+
+kafka-console-consumer --topic my-topic --bootstrap-server localhost:9092 --group my-group --from-beginning
+
+
+-----------------------------------
+CONFIGURACION DE PRODUCER PARA QUE NO SE USE LA PARTICION 0 POR DEFECTO Y LAS DE CUN CONSUMIDOR RECIBA EL MENSAJE
+
+kafka-console-producer --topic my-topic --bootstrap-server localhost:9092 --property "parse.key=true" --property "key.separator=:"
+
+---
+
+X 2
+kafka-console-consumer --topic my-topic --bootstrap-server localhost:9092 --group my-group --from-beginning
+
+***
+[appuser@61d8cf3c0b0a ~]$ kafka-console-producer --topic my-topic --bootstrap-server localhost:9092 --property "parse.key=true" --property "key.separator=:"
+>user1:asdads
+>user2:zzzzz
+>user3:xxxxxx
+***
+
+
+------------------------------------------------
+COMANDO PARA DESCRIBIR UN GRUPO DE CONSUMIDORES
+-------------------------------------------------
+
+docker exec -it kafka bash
+
+kafka-consumer-groups --bootstrap-server localhost:9092 --describe --group my-group
+
+
