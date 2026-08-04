@@ -29,6 +29,7 @@ spring:
         native:
           search-locations: file:///C:\Users\Fanta\Documents\01-desarrollo\A8_microservices_kubernetes_india\A8-secc13-spCloudConfig-git-2\configserver\src\main\resources\config
           #search-locations: classpath:/config
+  #159
   rabbitmq:
     host: localhost
     port: 5672
