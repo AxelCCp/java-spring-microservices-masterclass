@@ -85,5 +85,5 @@ resilience4j:
     instances:
       retryBreaker:
         timeout-duration: 0
-        limit-refresh-period: 
+        limit-refresh-period: 1
         limit-for-period: 2

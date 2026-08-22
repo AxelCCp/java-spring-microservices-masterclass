@@ -3,8 +3,8 @@ server:
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/db-order-indi
-    username: ${DB_USER} #postgres  #AGREGAR .ENV  DE ORDER A LAS CONFIGURACIONES DEL RUN DE ORDER.
-    password: ${DB_PASS} #sasa
+    username: postgres #${DB_USER} #postgres  #AGREGAR .ENV  DE ORDER A LAS CONFIGURACIONES DEL RUN DE ORDER.
+    password: sasa #${DB_PASS} #sasa
   jpa:
     database: POSTGRESQL
     show-sql: true

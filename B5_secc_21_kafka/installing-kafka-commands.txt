@@ -92,3 +92,17 @@ docker exec -it kafka bash
 kafka-consumer-groups --bootstrap-server localhost:9092 --describe --group my-group
 
 
+
+-----------------------
+ENDPOINTS HTTPIE
+-----------------------
+
+http POST localhost:8080/api/send message==asdadsasdasd
+http POST localhost:8080/api/send-obj message==asdadsasdasd
+
+
+
+
+
+
+

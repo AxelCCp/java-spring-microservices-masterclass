@@ -9,8 +9,10 @@ spring:
     config:
       server:
         native:
-          search-locations: file:///C:\Users\Fanta\Documents\01-desarrollo\A8_microservices_kubernetes_india\B2_secc_16_eureka_ecomm\configserver\src\main\resources\config
+          search-locations: file:///home/boo/Documentos/a1_studio/a0_indi_microservices_spring/java-spring-microservices-masterclass/B2_secc_16_eureka_ecomm/configserver/src/main/resources/config
+          #search-locations: file:///C:\Users\Fanta\Documents\01-desarrollo\A8_microservices_kubernetes_india\B2_secc_16_eureka_ecomm\configserver\src\main\resources\config
           #search-locations: classpath:/config
+          #Ruta linux: 
 
   # DESPLIEGA EL CONTENEDOR DE RABBIT
   # docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:4-management

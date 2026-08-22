@@ -92,3 +92,29 @@ docker exec -it kafka bash
 kafka-consumer-groups --bootstrap-server localhost:9092 --describe --group my-group
 
 
+
+
+------------------------------------------------
+SPRING CLOUD STREAMS
+------------------------------------------------
+
+kafka-console-consumer --topic my-topic-new --bootstrap-server localhost:9092 --group my-group --from-beginning
+
+----------
+PARTITIONS
+----------
+
+docker exec -it kafka bash
+kafka-topics --list --bootstrap-server localhost:9092
+kafka-topics --describe --topic my-topic --bootstrap-server localhost:9092
+
+kafka-console-consumer --topic my-topic --bootstrap-server localhost:9092 --group my-group --from-beginning --property print.partition=true
+
+
+---------------------------------
+MORE THAN ONE TOPIC
+---------------------------------
+
+kafka-console-consumer --topic my-topic --bootstrap-server localhost:9092 --group my-group --from-beginning --property print.partition=true
+
+kafka-console-consumer --topic my-topic-new --bootstrap-server localhost:9092 --group my-group --from-beginning

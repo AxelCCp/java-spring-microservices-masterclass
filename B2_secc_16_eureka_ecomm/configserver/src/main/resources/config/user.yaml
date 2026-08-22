@@ -1,8 +1,8 @@
 spring:
   data:
     mongodb:
-      uri: ${MONGO_URI}
-      database: ${DB_MONGO} #db-user-indi
+      uri: mongodb://localhost:27017/ #${MONGO_URI}
+      database: db-user-indi #${DB_MONGO} #db-user-indi
   rabbitmq:
     host: localhost
     port: 5672

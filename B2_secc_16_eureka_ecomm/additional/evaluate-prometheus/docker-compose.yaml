@@ -48,7 +48,8 @@ services:
     volumes:
       - ./logging/alloy-local-config.yaml:/etc/alloy/config.alloy:ro
       - /var/run/docker.sock:/var/run/docker.sock
-      - C:\Users\Fanta\Documents\01-desarrollo\A8_microservices_kubernetes_india\B2_secc_16_eureka_ecomm\logs:/logs:ro
+      - /home/boo/Documentos/a1_studio/a0_indi_microservices_spring/java-spring-microservices-masterclass/B2_secc_16_eureka_ecomm/logs:/logs:ro
+      #- C:\Users\Fanta\Documents\01-desarrollo\A8_microservices_kubernetes_india\B2_secc_16_eureka_ecomm\logs:/logs:ro
       #- C:\Users\Fanta\Documents\01-desarrollo\A8_microservices_kubernetes_india\B2_secc_16_eureka_ecomm\logs:logs-parent:ro
       #- ../../logs:logs-parent:ro
     command:  run --server.http.listen-addr=0.0.0.0:12345 --storage.path=/var/lib/alloy/data /etc/alloy/config.alloy

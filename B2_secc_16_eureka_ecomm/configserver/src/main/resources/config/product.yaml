@@ -4,8 +4,8 @@ server:
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/db-product-indi
-    username: ${DB_USER} #postgres  #AGREGAR .ENV  DE PRODUCT A LAS CONFIGURACIONES DEL RUN DE PRODUCT.
-    password: ${DB_PASS} #sasa
+    username: postgres #${DB_USER} #postgres  #AGREGAR .ENV  DE PRODUCT A LAS CONFIGURACIONES DEL RUN DE PRODUCT.
+    password: sasa #${DB_PASS} #sasa
   jpa:
     database: POSTGRESQL
     show-sql: true

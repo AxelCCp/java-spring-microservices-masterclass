@@ -15,4 +15,11 @@ public class KafkaConsumerNew {
         };         
     }
 
+      @Bean
+    public Consumer <String> processRiderStatus() {
+        return status -> {
+            System.out.println("received: " + status);
+        };         
+    }
+
 }
