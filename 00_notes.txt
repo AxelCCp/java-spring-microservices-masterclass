@@ -130,6 +130,25 @@ psql 'postgresql://neondb_owner:npg_YgyCfxXaAS48@ep-empty-bush-adpf6ten-pooler.c
 docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:4-management
 
 
+-----------------------------------------
+
+303 - KEYCLOAK
+
+docker run -p 127.0.0.1:8443:8080 -e KC_BOOTSTRAP_ADMIN_USERNAME=admin -e KC_BOOTSTRAP_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:26.7.3 start-dev
+
+docker run -d -p 127.0.0.1:8443:8080 -e KC_BOOTSTRAP_ADMIN_USERNAME=admin -e KC_BOOTSTRAP_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:26.7.3 start-dev
+
+localhost:8443
+admin
+admin
+
+admin_1
+sasa
+
+
+
+
+
 
 
 

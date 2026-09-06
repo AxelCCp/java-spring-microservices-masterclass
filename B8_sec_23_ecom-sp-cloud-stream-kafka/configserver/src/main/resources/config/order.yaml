@@ -1,0 +1,116 @@
+server:
+  port: 8083
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db-order-indi
+    username: postgres #${DB_USER} #postgres  #AGREGAR .ENV  DE ORDER A LAS CONFIGURACIONES DEL RUN DE ORDER.
+    password: sasa #${DB_PASS} #sasa
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  #291
+  cloud:
+    stream:
+      bindings:
+        createOrder-out-0:
+          destination: order.exchange #.new
+          content-type: application/json
+      
+      #rabbit:
+      #  bindings:
+      #    createOrder-out-0:
+      #      producer:
+      #        routing-key-expression: '''order.tracking'''   # .new
+      kafka:
+        binder:
+          brokers: localhost:9092
+
+  # DESPLIEGA EL CONTENEDOR DE RABBIT
+  # docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:4-management
+  #rabbitmq:
+  #  host: localhost
+  #  port: 5672
+  #  username: guest
+  #  password: guest
+
+#256 - configuracion de exchange queue y traking - se comenta en clase ***291***,  ya que no se necesita, se usa spring cloud stream con rabbit. 292-se descomenta
+#rabbitmq:
+#  exchange:
+#    name: order.exchange
+#  queue:
+#    name: order.queue
+#  routing:
+#    key: order.tracking    
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  #para mostrar detalles acerca de la health - para circuit breaker y resilience4j      
+  endpoint:
+    health:
+      show-details: always
+  health:
+    circuitbreakers:
+      enabled: true    
+
+  #zipkin
+  tracing:
+    sampling:
+      probability: 1.0
+
+
+# http://localhost:8083/actuator/busrefresh
+
+
+
+app:
+  message: "--- HELLO MS ORDER upp---"
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true
+
+logging:
+  file:
+    name: logs/${spring.application.name}.log
+  logback:
+    rollingpolicy:
+      max-file-size: 5MB
+      max-history: 7
+
+# Circuit Breaker
+resilience4j:
+  circuitbreaker:
+    instances:
+      product:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        minimumNumberOfCalls: 5
+        permittedNumberOfCallsInHalfOpenState: 3
+        waitDurationInOpenState: 10s
+        failureRateThreshold: 50
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        slidingWindowType: count_based
+  retry:
+    instances:
+      retryBreaker:
+        maxAttempts: 5
+        waitDuration: 500ms
+  ratelimiter:
+    instances:
+      retryBreaker:
+        timeout-duration: 0
+        limit-refresh-period: 
+        limit-for-period: 2

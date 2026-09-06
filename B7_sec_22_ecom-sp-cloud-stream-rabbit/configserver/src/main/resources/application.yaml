@@ -1,0 +1,28 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: configserver
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: file:///home/boo/Documentos/a1_studio/a0_indi_microservices_spring/java-spring-microservices-masterclass/B7_secc_22_ecomm-spring-cloud-stream/configserver/src/main/resources/config
+          #search-locations: file:///C:\Users\Fanta\Documents\01-desarrollo\A8_microservices_kubernetes_india\B4_secc_20_ecomm-gateway-rabittmq\configserver\src\main\resources\config
+          #search-locations: classpath:/config
+
+  # DESPLIEGA EL CONTENEDOR DE RABBIT
+  # docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:4-management
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
